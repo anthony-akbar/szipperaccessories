@@ -1,7 +1,7 @@
 <nav class="side-nav">
     <ul>
         <li>
-            <a {{--href="{{ route('admin') }}"--}}
+            <a href="{{ route('admin') }}"
                class="side-menu side-menu{{ request()->is("admin") ? "--active" : "" }}">
                 <div class="side-menu__icon"><i data-lucide="home"></i></div>
                 <div class="side-menu__title">Dashboard</div>
@@ -62,7 +62,6 @@ l-193 96 0 191 c0 210 -6 236 -60 264 -41 21 -1107 22 -1157 0z m1007 -374 c0
 -361 3 -361 8 0 4 19 98 42 210 l41 202 277 0 277 0 37 -187z"/>
                         </g>
                     </svg>
-
                 </div>
                 <div class="side-menu__title">
                     Zipper
@@ -76,6 +75,13 @@ l-193 96 0 191 c0 210 -6 236 -60 264 -41 21 -1107 22 -1157 0z m1007 -374 c0
                 </div>
             </a>
             <ul class="{{ request()->is("admin/zipper/") || request()->is("admin/zipper/*") ? "side-menu__sub-open" : "" }}" {{ request()->is("admin/zipper/") || request()->is("admin/zipper/*") ? 'style="display: none;"' : "" }}>
+                <li>
+                    <a href="{{ route('admin.zipper.categories') }}"
+                       class="side-menu">
+                        <div class="side-menu__icon"><i data-lucide="layers"></i></div>
+                        <div class="side-menu__title">Categories</div>
+                    </a>
+                </li>
                 <li>
                     <a href="#" class="side-menu">
                         <div class="side-menu__icon">
@@ -107,13 +113,7 @@ l-193 96 0 191 c0 210 -6 236 -60 264 -41 21 -1107 22 -1157 0z m1007 -374 c0
                 </li>
             </ul>
         </li>
-        <li>
-            <a {{--href="{{ route('admin.categories') }}"--}}
-               class="side-menu side-menu{{ request()->is("admin/categories") || request()->is("admin/categories/*") ? "--active" : "" }}">
-                <div class="side-menu__icon"><i data-lucide="image"></i></div>
-                <div class="side-menu__title">Categories</div>
-            </a>
-        </li>
+
         <li>
             <a {{--href="{{ route('admin.products') }}"--}}
                class="side-menu side-menu{{ request()->is("admin/products") || request()->is("admin/products/*") ? "--active" : "" }}">
