@@ -8,7 +8,7 @@
             </a>
         </li>
         <li>
-            <a {{--href="{{ route("admin.slider") }}"--}}
+            <a href="{{ route("admin.slider") }}"
                class="side-menu side-menu{{ request()->is("admin/slider") || request()->is("admin/slider/*") ? "--active" : "" }}">
                 <div class="side-menu__icon"><i data-lucide="align-justify"></i></div>
                 <div class="side-menu__title">Sliders</div>
