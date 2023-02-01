@@ -3,6 +3,7 @@
 use App\Http\Controllers\admin\DashboardController;
 use App\Http\Controllers\admin\SliderController;
 use App\Http\Controllers\admin\zipper\CategoriesController;
+use App\Http\Controllers\admin\zipper\ProductsController;
 use App\Models\Category;
 use App\Models\SliderItem;
 use Illuminate\Support\Facades\Route;
@@ -21,7 +22,13 @@ Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function () {
             Route::post('/store', [CategoriesController::class, 'store'])->name('admin.zipper.categories.store');
             Route::delete('/{id}', [CategoriesController::class, 'destroy'])->name('admin.zipper.categories.delete');
             Route::get('/{id}', [CategoriesController::class, 'show'])->name('admin.zipper.categories.show');
-
+        });
+        Route::group(['prefix'=>'products', 'namespace'=>'products'], function () {
+            Route::get('/', [ProductsController::class, 'index'])->name('admin.zipper.products');
+            Route::post('/store', [ProductsController::class, 'store'])->name('admin.zipper.products.store');
+            Route::get('/search', [ProductsController::class, 'search'])->name('admin.zipper.products.search');
+            Route::post('/{id}/edit', [ProductsController::class, 'edit'])->name('admin.zipper.products.edit');
+            Route::delete('/{id}', [ProductsController::class, 'destroy'])->name('admin.zipper.products.delete');
         });
     });
 });
