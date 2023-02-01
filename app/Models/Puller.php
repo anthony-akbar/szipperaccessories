@@ -12,6 +12,8 @@ class Puller extends Model
     use SoftDeletes;
 
     protected $fillable = [
-        'image',
+        'title',
+        'size',
+        'image'
     ];
 }

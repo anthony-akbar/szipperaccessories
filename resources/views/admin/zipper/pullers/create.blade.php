@@ -23,7 +23,7 @@
 <!-- BEGIN: Modal Toggle -->
 <div class="my-4">
     <a href="javascript:;" data-tw-toggle="modal" data-tw-target="#static-backdrop-modal-preview"
-       class="btn btn-primary">Add Products</a>
+       class="btn btn-primary">Add Puller</a>
 </div>
 <!-- END: Modal Toggle -->
 
@@ -34,7 +34,7 @@
         <div class="modal-content">
             <div class="modal-body px-5 py-10">
                 <div class="text-left">
-                    <form class="mt-3" action="{{route('admin.zipper.products.store')}}" method="post"
+                    <form class="mt-3" action="{{route('admin.zipper.pullers.store')}}" method="post"
                           enctype="multipart/form-data">
                         @csrf
                         <div class="flex items-center justify-center w-full">
@@ -67,14 +67,6 @@
                             <input id="color" type="number" name="color" class="form-control" placeholder="Color"
                                    required>
                         </div>
-                        <label for="category_id" class="form-label mt-3">Category Id</label>
-                        <select class="tom-select w-full" id="category_id" name="category_id" required>
-                            @foreach($categories as $category)
-                                <option value="{{ $category->id }}">
-                                    {{ $category->title }}
-                                </option>
-                            @endforeach
-                        </select>
                         <button class="btn btn-secondary mt-5 w-24 mr-2" data-tw-dismiss="modal">Cancel</button>
                         <button type="submit" class="btn btn-primary w-24 text-">Ok</button>
                     </form>
