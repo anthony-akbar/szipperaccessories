@@ -54,6 +54,6 @@ Route::get('/', function () {
     $sliders = SliderItem::all();
     $categories = Category::orderBy('created_at', 'desc')->paginate(4);
     return view('front.home.index', compact('sliders', 'categories'));
-});
+})->name('homepage');
 
 Route::post('/contact', [ContactController::class, 'store'])->name('front.contact');
