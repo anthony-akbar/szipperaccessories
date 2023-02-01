@@ -7,7 +7,9 @@ use App\Http\Controllers\admin\zipper\ProductsController;
 use App\Http\Controllers\admin\zipper\PullersController;
 use App\Http\Controllers\admin\zipper\SlidersController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\front\zipper\PullerFrontControoler;
 use App\Models\Category;
+use App\Models\Puller;
 use App\Models\SliderItem;
 use Illuminate\Support\Facades\Route;
 
@@ -53,7 +55,9 @@ Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function () {
 Route::get('/', function () {
     $sliders = SliderItem::all();
     $categories = Category::orderBy('created_at', 'desc')->paginate(4);
-    return view('front.home.index', compact('sliders', 'categories'));
+    $pullers = Puller::orderBy('created_at', 'desc')->paginate(4);
+    return view('front.home.index', compact('sliders', 'categories','pullers'));
 })->name('homepage');
 
 Route::post('/contact', [ContactController::class, 'store'])->name('front.contact');
+
