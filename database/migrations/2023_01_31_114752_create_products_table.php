@@ -21,6 +21,10 @@ return new class extends Migration
             $table->unsignedBigInteger('category_id');
             $table->timestamps();
             $table->softDeletes();
+
+
+            $table->index('category_id', 'product_category_idx');
+            $table->foreign('category_id', 'product_category_fk')->on('categories')->references('id');
         });
     }
 
