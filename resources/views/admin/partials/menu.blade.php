@@ -83,11 +83,11 @@ l-193 96 0 191 c0 210 -6 236 -60 264 -41 21 -1107 22 -1157 0z m1007 -374 c0
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="side-menu">
+                    <a href="{{ route('admin.zipper.products') }}" class="side-menu">
                         <div class="side-menu__icon">
                         </div>
                         <div class="side-menu__title">
-                            Zippers
+                            Products
                         </div>
                     </a>
                 </li>
