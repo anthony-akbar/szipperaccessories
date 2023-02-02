@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\admin\DashboardController;
+use App\Http\Controllers\admin\PartnersController;
 use App\Http\Controllers\admin\SliderController;
 use App\Http\Controllers\admin\zipper\CategoriesController;
 use App\Http\Controllers\admin\zipper\ProductsController;
@@ -50,6 +51,13 @@ Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function () {
             Route::post('/{id}/edit', [SlidersController::class, 'edit'])->name('admin.zipper.sliders.edit');
             Route::delete('/{id}', [SlidersController::class, 'destroy'])->name('admin.zipper.sliders.delete');
         });
+    });
+    Route::group(['prefix' => 'partners'], function () {
+        Route::get('/', [PartnersController::class, 'index'])->name('admin.partners');
+        Route::post('/store', [PartnersController::class, 'store'])->name('admin.partners.store');
+        Route::get('/search', [PartnersController::class, 'search'])->name('admin.partners.search');
+        Route::post('/{id}/edit', [PartnersController::class, 'edit'])->name('admin.partners.edit');
+        Route::delete('/{id}', [PartnersController::class, 'destroy'])->name('admin.partners.delete');
     });
 });
 

@@ -113,16 +113,8 @@ l-193 96 0 191 c0 210 -6 236 -60 264 -41 21 -1107 22 -1157 0z m1007 -374 c0
                 </li>
             </ul>
         </li>
-
         <li>
-            <a {{--href="{{ route('admin.products') }}"--}}
-               class="side-menu side-menu{{ request()->is("admin/products") || request()->is("admin/products/*") ? "--active" : "" }}">
-                <div class="side-menu__icon"><i data-lucide="camera"></i></div>
-                <div class="side-menu__title">Products</div>
-            </a>
-        </li>
-        <li>
-            <a {{--href="{{ route('admin.partners') }}"--}}
+            <a href="{{ route('admin.partners') }}"
                class="side-menu side-menu{{ request()->is("admin/partners") || request()->is("admin/partners/*") ? "--active" : "" }}">
                 <div class="side-menu__icon"><i data-lucide="briefcase"></i></div>
                 <div class="side-menu__title">Partners</div>
