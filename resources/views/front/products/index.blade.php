@@ -12,7 +12,6 @@
             <ul class="portfolio-flters" data-aos="fade-up" data-aos-delay="100">
                 @foreach($categories as $category)
                     <li data-filter=".filter-{{ str_replace(' ', '_' , strtolower($category->title)) }}">{{ $category->title }}</li>
-
                 @endforeach
                 <li class="filter-active" data-filter=".filter-pullers">Pullers</li>
                 <li data-filter=".filter-sliders">Sliders</li>
@@ -33,7 +32,7 @@
                                 <div class="portfolio-info">
                                     <h4>{{$category->products[$i]->title}}</h4>
                                     <p>{{$category->products[$i]->size}}</p>
-                                    <a href="{{'storage/'. $category->products[$i]->image }}" title="Construction 1"
+                                    <a href="{{'storage/'. $category->products[$i]->image }}" title="{{$category->products[$i]->title}}"
                                        data-gallery="portfolio-gallery-construction" class="glightbox preview-link"><i
                                             class="bi bi-zoom-in"></i></a>
                                     <a href="" title="More Details" class="details-link"><i
@@ -56,7 +55,7 @@
                             <div class="portfolio-info">
                                 <h4>{{$puller->title}}</h4>
                                 <p>{{$puller->size}}</p>
-                                <a href="{{'storage/'. $puller->image }}" title="Construction 1"
+                                <a href="{{'storage/'. $puller->image }}" title="{{$puller->title}}">
                                    data-gallery="portfolio-gallery-construction" class="glightbox preview-link"><i
                                         class="bi bi-zoom-in"></i></a>
                                 <a href="" title="More Details" class="details-link"><i
@@ -79,10 +78,10 @@
                             <div class="portfolio-info">
                                 <h4>{{$slider->title}}</h4>
                                 <p>{{$slider->size}}</p>
-                                <a href="{{'storage/'. $slider->image }}" title="Repairs 1"
+                                <a href="{{'storage/'. $slider->image }}" title="{{$slider->title}}">
                                    data-gallery="portfolio-gallery-repairs" class="glightbox preview-link"><i
                                         class="bi bi-zoom-in"></i></a>
-                                <a href="project-details.html" title="More Details" class="details-link"><i
+                                <a href="" title="More Details" class="details-link"><i
                                         class="bi bi-link-45deg"></i></a>
                             </div>
                         </div>
