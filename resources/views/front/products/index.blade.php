@@ -10,15 +10,39 @@
              data-portfolio-sort="original-order">
 
             <ul class="portfolio-flters" data-aos="fade-up" data-aos-delay="100">
-                <li data-filter="*" class="filter-active">All</li>
-                <li data-filter=".filter-metalzippers">Metal zippers</li>
-                <li data-filter=".filter-nelonzippers">Nelon zippers</li>
-                <li data-filter=".filter-pullers">Pullers</li>
+                @foreach($categories as $category)
+                    <li data-filter=".filter-{{ str_replace(' ', '_' , strtolower($category->title)) }}">{{ $category->title }}</li>
+
+                @endforeach
+                <li class="filter-active" data-filter=".filter-pullers">Pullers</li>
                 <li data-filter=".filter-sliders">Sliders</li>
             </ul><!-- End Projects Filters -->
 
             <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
+                @foreach($categories as $category)
+                    @for($i=0; $i< $o=count($category->products) < 3 ? count($category->products) : 3; $i++)
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-{{ str_replace(' ', '_' , strtolower($category->title)) }}">
+                            <div class="portfolio-content h-100">
+                                <div
+                                    style="background-image: url({{'storage/'. $category->products[$i]->image }}); background-size: cover; background-position: center;"
+                                >
+                                    <img class="img-fluid" style="opacity: 0;"
+                                         src="{{ asset('assets/img/projects/construction-1.jpg') }}"
+                                         alt="img">
+                                </div>
+                                <div class="portfolio-info">
+                                    <h4>{{$category->products[$i]->title}}</h4>
+                                    <p>{{$category->products[$i]->size}}</p>
+                                    <a href="{{'storage/'. $category->products[$i]->image }}" title="Construction 1"
+                                       data-gallery="portfolio-gallery-construction" class="glightbox preview-link"><i
+                                            class="bi bi-zoom-in"></i></a>
+                                    <a href="" title="More Details" class="details-link"><i
+                                            class="bi bi-link-45deg"></i></a>
+                                </div>
+                            </div>
+                        </div><!-- End Projects Item -->
+                    @endfor
+                @endforeach
                 @foreach($pullers as $puller)
                     <div class="col-lg-4 col-md-6 portfolio-item filter-pullers">
                         <div class="portfolio-content h-100">
@@ -41,49 +65,29 @@
                         </div>
                     </div><!-- End Projects Item -->
                 @endforeach
-                <div class="col-lg-4 col-md-6 portfolio-item filter-nelonzippers">
-                    <div class="portfolio-content h-100">
-                        <img src="assets/img/projects/construction-1.jpg" class="img-fluid" alt="">
-                        <div class="portfolio-info">
-                            <h4>Construction 1</h4>
-                            <p>Lorem ipsum, dolor sit amet consectetur</p>
-                            <a href="assets/img/projects/construction-1.jpg" title="Construction 1"
-                               data-gallery="portfolio-gallery-construction" class="glightbox preview-link"><i
-                                    class="bi bi-zoom-in"></i></a>
-                            <a href="project-details.html" title="More Details" class="details-link"><i
-                                    class="bi bi-link-45deg"></i></a>
-                        </div>
-                    </div>
-                </div><!-- End Projects Item -->
-                <div class="col-lg-4 col-md-6 portfolio-item filter-sliders">
-                    <div class="portfolio-content h-100">
-                        <img src="assets/img/projects/repairs-1.jpg" class="img-fluid" alt="">
-                        <div class="portfolio-info">
-                            <h4>Repairs 1</h4>
-                            <p>Lorem ipsum, dolor sit amet consectetur</p>
-                            <a href="assets/img/projects/repairs-1.jpg" title="Repairs 1"
-                               data-gallery="portfolio-gallery-repairs" class="glightbox preview-link"><i
-                                    class="bi bi-zoom-in"></i></a>
-                            <a href="project-details.html" title="More Details" class="details-link"><i
-                                    class="bi bi-link-45deg"></i></a>
-                        </div>
-                    </div>
-                </div><!-- End Projects Item -->
-                <div class="col-lg-4 col-md-6 portfolio-item filter-metalzippers">
-                    <div class="portfolio-content h-100">
-                        <img src="assets/img/projects/remodeling-2.jpg" class="img-fluid" alt="">
-                        <div class="portfolio-info">
-                            <h4>Remodeling 2</h4>
-                            <p>Lorem ipsum, dolor sit amet consectetur</p>
-                            <a href="assets/img/projects/remodeling-2.jpg" title="Remodeling 2"
-                               data-gallery="portfolio-gallery-remodeling" class="glightbox preview-link"><i
-                                    class="bi bi-zoom-in"></i></a>
-                            <a href="project-details.html" title="More Details" class="details-link"><i
-                                    class="bi bi-link-45deg"></i></a>
-                        </div>
-                    </div>
-                </div><!-- End Projects Item -->
 
+                @foreach($sliders as $slider)
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-sliders">
+                        <div class="portfolio-content h-100">
+                            <div
+                                style="background-image: url({{'storage/'. $slider->image }}); background-size: cover; background-position: center;"
+                            >
+                                <img class="img-fluid" style="opacity: 0;"
+                                     src="{{ asset('assets/img/projects/construction-1.jpg') }}"
+                                     alt="img">
+                            </div>
+                            <div class="portfolio-info">
+                                <h4>{{$slider->title}}</h4>
+                                <p>{{$slider->size}}</p>
+                                <a href="{{'storage/'. $slider->image }}" title="Repairs 1"
+                                   data-gallery="portfolio-gallery-repairs" class="glightbox preview-link"><i
+                                        class="bi bi-zoom-in"></i></a>
+                                <a href="project-details.html" title="More Details" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div>
+                    </div><!-- End Projects Item -->
+                @endforeach
             </div><!-- End Projects Container -->
 
         </div>

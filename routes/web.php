@@ -10,6 +10,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\front\zipper\PullerFrontControoler;
 use App\Models\Category;
 use App\Models\Puller;
+use App\Models\Slider;
 use App\Models\SliderItem;
 use Illuminate\Support\Facades\Route;
 
@@ -53,10 +54,11 @@ Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function () {
 });
 
 Route::get('/', function () {
-    $sliders = SliderItem::all();
+    $slidersItem = SliderItem::all();
     $categories = Category::orderBy('created_at', 'desc')->paginate(4);
-    $pullers = Puller::orderBy('created_at', 'desc')->paginate(4);
-    return view('front.home.index', compact('sliders', 'categories','pullers'));
+    $pullers = Puller::orderBy('created_at', 'desc')->paginate(3);
+    $sliders = Slider::orderBy('created_at', 'desc')->paginate(3);
+    return view('front.home.index', compact('sliders', 'categories', 'pullers','slidersItem'));
 })->name('homepage');
 
 Route::post('/contact', [ContactController::class, 'store'])->name('front.contact');

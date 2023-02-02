@@ -18,7 +18,7 @@
                                 <div class="col-xl-7 d-flex align-items-center">
                                     <div class="card-body">
                                         <h4 class="card-title">{{$category->title}}</h4>
-                                        <p>{{$category->description}}</p>
+                                        <p>{{substr($category->description ,0,100).'...'}}</p>
                                     </div>
                                 </div>
                             </div>
