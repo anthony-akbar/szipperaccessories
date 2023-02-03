@@ -80,4 +80,7 @@ Route::group(['prefix' => 'categories'], function () {
     Route::get('/', [ CategoryController::class, 'index' ])->name('front.category');
     Route::get('/{id}', [ CategoryController::class, 'show' ])->name('front.category.show');
 });
+Route::get('/zippers', [ CategoryController::class, 'zipper'])->name('front.zippers.show');
+Route::get('/sliders', [ CategoryController::class, 'slider'])->name('front.sliders.show');
+Route::get('/pullers', [ CategoryController::class, 'puller'])->name('front.pullers.show');
 

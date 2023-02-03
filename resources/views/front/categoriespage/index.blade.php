@@ -22,7 +22,7 @@
             <div class="row gy-4">
                 @foreach($categories as $category)
                     <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                        <div class="card-item">
+                        <a href="{{ route('front.category.show', $category->id) }}" class="card-item">
                             <div class="row">
                                 <div class="col-xl-5">
                                     <div class="card-bg"
@@ -35,10 +35,10 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div><!-- End Card Item -->
                 @endforeach
-                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                <a href="{{ route('front.pullers.show') }}" class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="card-item">
                         <div class="row">
                             <div class="col-xl-5">
@@ -48,13 +48,12 @@
                             <div class="col-xl-7 d-flex align-items-center">
                                 <div class="card-body">
                                     <h4 class="card-title">Pullers</h4>
-                                    <p>{{substr($category->description ,0,100).'...'}}</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div><!-- End Card Item -->
-                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                </a><!-- End Card Item -->
+                <a href="{{ route('front.sliders.show') }}" class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="card-item">
                         <div class="row">
                             <div class="col-xl-5">
@@ -64,12 +63,11 @@
                             <div class="col-xl-7 d-flex align-items-center">
                                 <div class="card-body">
                                     <h4 class="card-title">Sliders</h4>
-                                    <p>{{substr($category['description_'.$lang] ,0,100).'...'}}</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div><!-- End Card Item -->
+                </a><!-- End Card Item -->
 
             </div>
         </div>

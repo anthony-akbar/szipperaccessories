@@ -22,6 +22,7 @@ class ProductController extends Controller
     public function show($id) {
         dd($id);
     }
+
 }
 //$categories = Category::all();
 //$sliders = Slider::orderBy('created_at', 'desc')->paginate(12);
