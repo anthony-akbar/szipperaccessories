@@ -71,7 +71,7 @@
                         <select class="tom-select w-full" id="category_id" name="category_id" required>
                             @foreach($categories as $category)
                                 <option value="{{ $category->id }}">
-                                    {{ $category->title }}
+                                    {{ $category->title_en }}
                                 </option>
                             @endforeach
                         </select>
