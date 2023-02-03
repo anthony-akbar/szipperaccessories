@@ -12,9 +12,15 @@ class Partner extends Model
     use SoftDeletes;
 
     protected $fillable = [
-        'title',
-        'subtitle',
+        'title_en',
+        'title_ru',
+        'title_uz',
+        'subtitle_en',
+        'subtitle_ru',
+        'subtitle_uz',
         'image',
-        'description'
+        'description_en',
+        'description_ru',
+        'description_uz'
     ];
 }

@@ -12,8 +12,12 @@ class SliderItem extends Model
     use SoftDeletes;
 
     protected $fillable = [
-        'title',
         'image',
-        'description'
+        'title_en',
+        'title_ru',
+        'title_uz',
+        'description_en',
+        'description_ru',
+        'description_uz'
     ];
 }

@@ -53,19 +53,44 @@
                         </div>
 
                         <div class="mt-3">
-                            <label for="title" class="form-label">Title</label>
-                            <input id="title" type="text" name="title" class="form-control"
-                                   placeholder="Partner Title" required>
+                            <div>
+                                <label for="title_en" class="form-label">Title (English)</label>
+                                <input name="title_en" id="title_en" type="text" class="form-control" placeholder="Title">
+                            </div>
+                            <div>
+                                <label for="title_ru" class="form-label">Title (Russian)</label>
+                                <input name="title_ru" id="title_ru" type="text" class="form-control" placeholder="Title">
+                            </div>
+                            <div>
+                                <label for="title_uz" class="form-label">Title (Uzbek)</label>
+                                <input name="title_uz" id="title_uz" type="text" class="form-control" placeholder="Title">
+                            </div>
                         </div>
                         <div class="mt-3">
-                            <label for="subtitle" class="form-label">Subtitle</label>
-                            <input id="subtitle" type="text" name="subtitle" class="form-control"
-                                   placeholder="Subtitle">
+                            <div>
+                                <label for="subtitle_en" class="form-label">Subtitle (English)</label>
+                                <input name="subtitle_en" id="subtitle_en" type="text" class="form-control" placeholder="Subtitle">
+                            </div>
+                            <div>
+                                <label for="subtitle_ru" class="form-label">Subtitle (Russian)</label>
+                                <input name="subtitle_ru" id="subtitle_ru" type="text" class="form-control" placeholder="Subtitle">
+                            </div>
+                            <div>
+                                <label for="subtitle_uz" class="form-label">Subtitle (Uzbek)</label>
+                                <input name="subtitle_uz" id="subtitle_uz" type="text" class="form-control" placeholder="Subtitle">
+                            </div>
                         </div>
                         <div class="mt-3">
-                            <label for="description" class="form-label">Description</label>
-                            <textarea id="description" type="number" name="description" class="form-control" placeholder="Description"
-                                      required></textarea>
+                            <label for="description_en" class="form-label">Description (English)</label>
+                            <textarea name="description_en" id="description_en" class="form-control" rows="3"></textarea>
+                        </div>
+                        <div class="mt-3">
+                            <label for="description_ru" class="form-label">Description (Russian)</label>
+                            <textarea name="description_ru" id="description_ru" class="form-control" rows="3"></textarea>
+                        </div>
+                        <div class="mt-3">
+                            <label for="description_uz" class="form-label">Description (Uzbek)</label>
+                            <textarea name="description_uz" id="description_uz" class="form-control" rows="3"></textarea>
                         </div>
                         <button class="btn btn-secondary mt-5 w-24 mr-2" data-tw-dismiss="modal">Cancel</button>
                         <button type="submit" class="btn btn-primary w-24 text-">Ok</button>
