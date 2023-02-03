@@ -12,8 +12,7 @@
                                 <h2 data-aos="fade-down">{{$slider['title_' . $lang]}}</h2>
                                 <p data-aos="fade-up">{{$slider['description_' . $lang]}}</p>
                                 <a data-aos="fade-up" data-aos-delay="200" href="#get-started"
-                                   class="btn-get-started">Get
-                                    Started</a>
+                                   class="btn-get-started">{{__('front.Get Started')}}</a>
                             </div>
                         </div>
                     </div>

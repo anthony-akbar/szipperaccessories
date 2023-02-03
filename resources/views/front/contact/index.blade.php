@@ -21,31 +21,30 @@
                 <form action="{{ route('front.contact') }}" method="post">
                     <div class="php-email-form">
                     @csrf
-                    <h3>Get a quote</h3>
-                    <p>Vel nobis odio laboriosam et hic voluptatem. Inventore vitae totam. Rerum repellendus enim linead
-                        sero park flows.</p>
+                    <h3>{{__('front.Contact us')}}</h3>
+                    <p>{{__('front.Contact us for cooperation.')}}</p>
                     <div class="row gy-3">
                         <div class="col-md-12">
-                            <input type="text" name="name" class="form-control" placeholder="Name" required="">
+                            <input type="text" name="name" class="form-control" placeholder="{{__('front.Name')}}" required="">
                         </div>
                         <div class="col-md-12 ">
-                            <input type="email" class="form-control" name="email" placeholder="Email" required="">
+                            <input type="email" class="form-control" name="email" placeholder="{{__('front.Email')}}" required="">
                         </div>
                         <div class="col-md-12">
-                            <input type="text" class="form-control" name="phone_number" placeholder="Phone Number"
+                            <input type="text" class="form-control" name="phone_number" placeholder="{{__('front.Phone Number')}}"
                                    required="">
                         </div>
                         <div class="col-md-12">
-                            <input type="text" class="form-control" name="company_name" placeholder="Company Name"
+                            <input type="text" class="form-control" name="company_name" placeholder="{{__('front.Company Name')}}"
                                    required="">
                         </div>
                         <div class="col-md-12">
-                            <textarea class="form-control" name="message" rows="6" placeholder="Message"
+                            <textarea class="form-control" name="message" rows="6" placeholder="{{__('front.Message')}}"
                                       required=""></textarea>
                         </div>
                         <div class="col-md-12 text-center" style="max-height: 200px;">
                             <div class="sent-message">Your quote request has been sent successfully. Thank you!</div>
-                            <button type="submit">Get a quote</button>
+                            <button type="submit">{{__('front.Submit')}}</button>
                         </div>
                     </div>
                     </div>
