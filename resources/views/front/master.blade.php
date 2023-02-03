@@ -36,8 +36,7 @@
 
 
 @include('front.partials.navbar')
-
-@yield('content')
+    @yield('content')
 
 <!-- ======= Footer ======= -->
 <footer id="footer" class="footer">
@@ -100,11 +99,8 @@
 
     <div class="footer-legal text-center position-relative">
         <div class="container">
-            <div class="copyright">
-                &copy; Copyright <strong><span>UpConstruction</span></strong>. All Rights Reserved
-            </div>
             <div class="credits">
-                Designed by <a href="https://royale.uz/">Royal LLC.</a>
+                Designed by <a href="https://royale.uz/">Royal</a>
             </div>
         </div>
     </div>

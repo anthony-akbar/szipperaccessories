@@ -1,3 +1,4 @@
+
 <!-- ======= Constructions Section ======= -->
 @if($categories->isEmpty())
 @else

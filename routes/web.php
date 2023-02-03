@@ -8,14 +8,16 @@ use App\Http\Controllers\admin\zipper\ProductsController;
 use App\Http\Controllers\admin\zipper\PullersController;
 use App\Http\Controllers\admin\zipper\SlidersController;
 use App\Http\Controllers\ContactController;
-use App\Http\Controllers\front\zipper\PullerFrontControoler;
+use App\Http\Controllers\front\CategoryController;
+use App\Http\Controllers\front\ProductController;
 use App\Models\Category;
+use App\Models\Partner;
 use App\Models\Puller;
 use App\Models\Slider;
 use App\Models\SliderItem;
 use Illuminate\Support\Facades\Route;
 
-
+Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => '\App\Http\Controllers\LanguageController@switchLang']);
 Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function () {
     Route::get('/', [DashboardController::class, 'index'])->name('admin');
     Route::group(['prefix' => 'slider'], function () {
@@ -66,8 +68,13 @@ Route::get('/', function () {
     $categories = Category::orderBy('created_at', 'desc')->paginate(4);
     $pullers = Puller::orderBy('created_at', 'desc')->paginate(3);
     $sliders = Slider::orderBy('created_at', 'desc')->paginate(3);
-    return view('front.home.index', compact('sliders', 'categories', 'pullers','slidersItem'));
+    $partners = Partner::all();
+    return view('front.home.index', ['lang' => \Illuminate\Support\Facades\App::getLocale()], compact('sliders', 'categories', 'pullers', 'slidersItem', 'partners'));
 })->name('homepage');
+Route::post('/contact', [ContactController::class, ['lang' => \Illuminate\Support\Facades\App::getLocale()], 'store'])->name('front.contact');
+Route::get('/product', [ProductController::class, ['lang' => \Illuminate\Support\Facades\App::getLocale()], 'index'])->name('productpage');
 
-Route::post('/contact', [ContactController::class, 'store'])->name('front.contact');
 
+Route::group(['prefix' => 'categories'], function () {
+    Route::get('/', [CategoryController::class, ['lang' => \Illuminate\Support\Facades\App::getLocale()], 'index']);
+});
