@@ -15,9 +15,13 @@ return new class extends Migration
     {
         Schema::create('slider_items', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
+            $table->string('title_en');
+            $table->string('title_ru');
+            $table->string('title_uz');
             $table->string('image');
-            $table->text('description');
+            $table->longText('description_en');
+            $table->longText('description_ru');
+            $table->longText('description_uz');
             $table->timestamps();
             $table->softDeletes();
         });
