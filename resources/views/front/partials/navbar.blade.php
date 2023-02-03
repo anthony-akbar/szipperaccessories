@@ -14,6 +14,7 @@
             <ul>
                 <li><a href="{{route('homepage')}}" class="active">{{__('front.Home')}}</a></li>
                 <li><a href="{{route('productpage')}}">{{__('front.Products')}}</a></li>
+                <li><a href="{{route('front.category')}}">{{__('front.Categories')}}</a></li>
                 <li class="dropdown">
                     <a href="" data-toggle="dropdown" id="navbarDropdownMenuLink"
                        aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">

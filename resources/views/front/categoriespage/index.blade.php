@@ -1,13 +1,23 @@
-@extends('front.layout')
-@section('title')
-    | Categories
-@endsection
+@extends('front.master')
 @section('content')
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/breadcrumbs-bg.jpg');">
+        <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+
+            <h2>{{__('front.Categories')}}</h2>
+            <ol>
+                <li><a href="{{route('homepage')}}">Home</a></li>
+                <li>{{__('front.Categories')}}</li>
+            </ol>
+
+        </div>
+    </div><!-- End Breadcrumbs -->
 
     <section id="constructions" class="constructions">
         <div class="container" data-aos="fade-up">
             <div class="section-header">
-                <h2>Categories</h2>
+                <h2>{{__('front.Categories')}}</h2>
             </div>
             <div class="row gy-4">
                 @foreach($categories as $category)

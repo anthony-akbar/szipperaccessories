@@ -76,5 +76,5 @@ Route::get('/product', [ProductController::class, 'index'])->name('productpage')
 
 
 Route::group(['prefix' => 'categories'], function () {
-    Route::get('/', [ CategoryController::class, 'index' ]);
+    Route::get('/', [ CategoryController::class, 'index' ])->name('front.category');
 });

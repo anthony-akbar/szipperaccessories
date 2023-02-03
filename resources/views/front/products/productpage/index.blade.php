@@ -4,10 +4,10 @@
     <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/breadcrumbs-bg.jpg');">
         <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
 
-            <h2>Products</h2>
+            <h2>{{__('front.Products')}}</h2>
             <ol>
                 <li><a href="{{route('homepage')}}">Home</a></li>
-                <li>Products</li>
+                <li>{{__('front.Products')}}</li>
             </ol>
 
         </div>
@@ -18,7 +18,7 @@
         <div class="container" data-aos="fade-up">
 
             <div class="section-header">
-                <h2>Our Products</h2>
+                <h2>{{__('front.Our Products')}}</h2>
             </div>
 
             <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry"

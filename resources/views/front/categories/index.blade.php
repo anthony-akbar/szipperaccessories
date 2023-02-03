@@ -18,7 +18,7 @@
                                 <div class="col-xl-7 d-flex align-items-center">
                                     <div class="card-body">
                                         <h4 class="card-title">{{$category['title_'.$lang]}}</h4>
-                                        <p>{{substr($category['description_'.$lang] ,0,200).'...'}}</p>
+                                        <p>{{substr($category['description_'.$lang] ,0,150).'...'}}</p>
                                     </div>
                                 </div>
                             </div>
