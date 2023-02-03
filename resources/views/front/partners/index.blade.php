@@ -1,5 +1,5 @@
 <!-- ======= Testimonials Section ======= -->
-@if($categories->isEmpty())
+@if($partners->isEmpty())
 @else
     <section id="testimonials" class="testimonials section-bg">
         <div class="container aos-init aos-animate" data-aos="fade-up">
