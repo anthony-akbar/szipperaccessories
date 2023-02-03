@@ -73,8 +73,10 @@ Route::get('/', function () {
 })->name('homepage');
 Route::post('/contact', [ContactController::class, 'store'])->name('front.contact');
 Route::get('/product', [ProductController::class, 'index'])->name('productpage');
+Route::get('/product/{id}', [ProductController::class, 'show'])->name('product.show');
 
 
 Route::group(['prefix' => 'categories'], function () {
     Route::get('/', [ CategoryController::class, 'index' ])->name('front.category');
+    Route::get('/{id}', [ CategoryController::class, 'show' ])->name('front.category.show');
 });
