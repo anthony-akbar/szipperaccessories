@@ -29,34 +29,26 @@
                             <img alt="Midone - HTML Admin Template" class="rounded-md"
                                  src="{{asset('storage/'.$partner->image)}}">
                             <div class="absolute bottom-0 text-white px-5 pb-6 z-10">
-                                <a href=""
-                                   class="block font-medium text-base">{{ $partner->title ?? '' }}</a>
+                                <a class="block font-medium text-base">{{ $partner->title_ru ?? '' }}</a>
                             </div>
                         </div>
                         <div class="text-slate-600 dark:text-slate-500 mt-5">
                             <div class="flex items-center">
-                                {{ $partner->subtitle ?? '' }}
+                                {{ $partner->subtitle_ru ?? '' }}
                             </div>
                             <div class="flex items-center">
-                                {{ $partner->description ?? '' }}
+                                {{ $partner->description_ru ?? '' }}
                             </div>
                         </div>
                     </div>
                     <div
                         class="flex justify-center lg:justify-end items-center p-5 border-t border-slate-200/60 dark:border-darkmode-400">
-                        <a class="flex items-center text-primary mr-auto" {{--href="{{ route('adminadmin.partners.show', $partner->id) }}"--}}>
-                            <i data-lucide="eye" class="mr-1"></i>
-                            Preview
-                        </a>
                         @include('admin.partners.edit')
-
-
                         <!-- BEGIN: Modal Toggle -->
                         <a href="javascript:;" data-tw-toggle="modal"
                            data-tw-target="#delete-modal-preview-{{$partner->id}}"
                            class="flex items-center mr-auto text-danger">
-                            <i data-lucide="trash-2" class="px-1 text-danger"></i>
-                            Delete</a>
+                            <i data-lucide="trash-2" class="px-1 text-danger"></i>Delete</a>
                         <!-- END: Modal Toggle -->
                         <!-- BEGIN: Modal Content -->
                         <div id="delete-modal-preview-{{$partner->id}}" class="modal" tabindex="-1" aria-hidden="true">
@@ -72,11 +64,10 @@
                                             </div>
                                         </div>
                                         <div class="px-5 pb-8 text-center">
-                                            <form action="{{ route('admin.partners.delete', $partner->id) }}"
-                                                  method="post">
-                                                <button type="button" data-tw-dismiss="modal"
+                                            <form action="{{ route('admin.partners.delete', $partner->id) }}" method="post">
+                                                <a type="button" data-tw-dismiss="modal"
                                                         class="btn btn-outline-secondary w-24 mr-1">Cancel
-                                                </button>
+                                                </a>
                                                 @csrf
                                                 @method('delete')
                                                 <button type="submit" class="btn btn-outline-danger w-24">Yes

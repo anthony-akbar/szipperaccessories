@@ -27,26 +27,52 @@
                     </div>
 
                     <div class="mt-3">
-                        <label for="title" class="form-label">Product Title</label>
-                        <input id="title" type="text" name="title" class="form-control"
-                               placeholder="Product Title"
-                               value="{{ old('title', $partner->title) }}" required>
+                        <label for="title_en" class="form-label">Title (English)</label>
+                        <input id="title_en" type="text" name="title_en" class="form-control"
+                               placeholder="Title"
+                               value="{{ old('title_en', $partner->title_en) }}" required>
                     </div>
                     <div class="mt-3">
-                        <label for="size" class="form-label">Product Size</label>
-                        <input id="size" type="text" name="size" class="form-control"
-                               placeholder="Product Size"
-                               value="{{ old('size', $partner->size) }}" required>
+                        <label for="title_ru" class="form-label">Title (Russian)</label>
+                        <input id="title_ru" type="text" name="title_ru" class="form-control"
+                               placeholder="Title"
+                               value="{{ old('title_ru', $partner->title_ru) }}" required>
                     </div>
                     <div class="mt-3">
-                        <label for="vertical-form-2" class="form-label">Colors</label>
-                        <input id="vertical-form-2" type="number" name="color" class="form-control"
-                               value="{{ old('color', $partner->color) }}" placeholder="Colors"
-                               required>
+                        <label for="title_uz" class="form-label">Title (Uzbek)</label>
+                        <input id="title_uz" type="text" name="title_uz" class="form-control"
+                               placeholder="Title"
+                               value="{{ old('title_uz', $partner->title_uz) }}" required>
                     </div>
-                    <button type="button" data-tw-dismiss="modal" class="btn btn-outline-secondary w-24 mr-1 mt-4">
+                    <div class="mt-3">
+                        <div>
+                            <label for="subtitle_en" class="form-label">Subtitle (English)</label>
+                            <input name="subtitle_en" id="subtitle_en" type="text" value="{{ old('subtitle_uz', $partner->subtitle_uz) }}" class="form-control" placeholder="Subtitle">
+                        </div>
+                        <div>
+                            <label for="subtitle_ru" class="form-label">Subtitle (Russian)</label>
+                            <input name="subtitle_ru" id="subtitle_ru" type="text" value="{{ old('subtitle_uz', $partner->subtitle_uz) }}" class="form-control" placeholder="Subtitle">
+                        </div>
+                        <div>
+                            <label for="subtitle_uz" class="form-label">Subtitle (Uzbek)</label>
+                            <input name="subtitle_uz" id="subtitle_uz" type="text" value="{{ old('subtitle_uz', $partner->subtitle_uz) }}" class="form-control" placeholder="Subtitle">
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                        <label for="description_en" class="form-label">Description (English)</label>
+                        <textarea name="description_en" id="description_en" class="form-control" rows="3">{{ old('description_uz', $partner->description_uz) }}</textarea>
+                    </div>
+                    <div class="mt-3">
+                        <label for="description_ru" class="form-label">Description (Russian)</label>
+                        <textarea name="description_ru" id="description_ru" class="form-control" rows="3">{{ old('description_uz', $partner->description_uz) }}</textarea>
+                    </div>
+                    <div class="mt-3">
+                        <label for="description_uz" class="form-label">Description (Uzbek)</label>
+                        <textarea name="description_uz" id="description_uz" class="form-control" rows="3">{{ old('description_uz', $partner->description_uz) }}</textarea>
+                    </div>
+                    <a type="button" data-tw-dismiss="modal" class="btn btn-outline-secondary w-24 mr-1 mt-4">
                         Cancel
-                    </button>
+                    </a>
                     <button type="submit" class="btn btn-primary w-24 text-">Ok</button>
                 </form>
             </div>

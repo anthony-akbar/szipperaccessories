@@ -109,12 +109,7 @@
                                      src="{{ asset('storage/' . $item->image) }}">
                             </div>
                         </div>
-                        <div
-                            class="flex justify-center lg:justify-end items-center p-5 border-t border-slate-200/60 dark:border-darkmode-400">
-                            <a class="flex items-center text-primary mr-auto" href="javascript:;">
-                                <i data-lucide="check-square"></i>
-                                Edit
-                            </a>
+                        <div class="flex justify-center lg:justify-end items-center p-5 border-t border-slate-200/60 dark:border-darkmode-400">
                             <!-- BEGIN: Modal Toggle -->
                             <a href="javascript:;" data-tw-toggle="modal"
                                data-tw-target="#delete-modal-preview-{{$item->id}}"
