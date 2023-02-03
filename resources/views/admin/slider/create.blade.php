@@ -48,6 +48,9 @@
                         <label for="description_uz" class="form-label">Description (Uzbek)</label>
                         <textarea name="description_uz" id="description_uz" class="form-control" rows="3"></textarea>
                     </div>
+                    <a type="button" data-tw-dismiss="modal"
+                       class="btn btn-outline-secondary w-24 mr-1">Cancel
+                    </a>
                     <button class="btn btn-primary mt-5" type="submit">Submit</button>
                 </form>
             </div>

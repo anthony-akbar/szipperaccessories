@@ -36,7 +36,7 @@ class PartnersController extends Controller
     public function edit(Request $request, $id)
     {
 
-        $data = $request->validated();
+        $data = $request->all();
         if (array_key_exists('image', $data)) $data['image'] = Storage::put('/images', $request['image']);
         $product = Partner::find($id);
         $product->update($data);

@@ -104,10 +104,12 @@
                             <img alt="Midone - HTML Admin Template" class="rounded-md"
                                  src="{{ asset('storage/' . $category->image) }}">
                             <div class="absolute bottom-0 text-white px-5 pb-6 z-10">
-                                <a href="" class="block font-medium text-base">{{ $category->title }}</a>
+                                <a class="block font-medium text-base">{{ $category->title_ru ?? '' }}</a>
                             </div>
                         </div>
-                        <div class="text-slate-600 dark:text-slate-500 mt-5">{{ $category->description }}</div>
+                        <div class="flex items-center">
+                            {{ $partner->description_ru ?? '' }}
+                        </div>
                     </div>
                     <div
                         class="flex justify-center lg:justify-end items-center p-5 border-t border-slate-200/60 dark:border-darkmode-400">
