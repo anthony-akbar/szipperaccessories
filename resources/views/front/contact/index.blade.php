@@ -1,6 +1,8 @@
 <section id="get-started" class="get-started section-bg">
     <div class="container">
-
+        <div class="section-header">
+            <h2>{{__('front.Contacts')}}</h2>
+        </div>
         <div class="row justify-content-between gy-4">
 
             <div class="col-lg-6 d-flex align-items-center aos-init aos-animate" data-aos="fade-up">

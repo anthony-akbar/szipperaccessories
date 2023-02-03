@@ -4,7 +4,7 @@
     <section id="constructions" class="constructions">
         <div class="container" data-aos="fade-up">
             <div class="section-header">
-                <h2>Categories</h2>
+                <h2>{{__('front.Categories')}}</h2>
             </div>
             <div class="row gy-4">
                 @foreach($categories as $category)

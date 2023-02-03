@@ -3,7 +3,7 @@
     <div class="container" data-aos="fade-up">
 
         <div class="section-header">
-            <h2>Our Products</h2>
+            <h2>{{__('front.Our Products')}}</h2>
         </div>
 
         <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry"
@@ -11,7 +11,7 @@
 
             <ul class="portfolio-flters" data-aos="fade-up" data-aos-delay="100">
                 @foreach($categories as $category)
-                    <li data-filter=".filter-{{ str_replace(' ', '_' , strtolower($category->title)) }}">{{ $category->title }}</li>
+                    <li data-filter=".filter-{{ str_replace(' ', '_' , strtolower($category['title_'.$lang])) }}">{{ $category['title_'.$lang] }}</li>
                 @endforeach
                 <li class="filter-active" data-filter=".filter-pullers">Pullers</li>
                 <li data-filter=".filter-sliders">Sliders</li>
@@ -21,7 +21,7 @@
                 @foreach($categories as $category)
                     @for($i=0; $i< $o=count($category->products) < 3 ? count($category->products) : 3; $i++)
                         <div
-                            class="col-lg-4 col-md-6 portfolio-item filter-{{ str_replace(' ', '_' , strtolower($category->title)) }}">
+                            class="col-lg-4 col-md-6 portfolio-item filter-{{ str_replace(' ', '_' , strtolower($category['title_'.$lang])) }}">
                             <div class="portfolio-content h-100">
                                 <div
                                     style="background-image: url({{'storage/'. $category->products[$i]->image }}); background-size: cover; background-position: center;"

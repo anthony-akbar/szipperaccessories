@@ -6,8 +6,7 @@ return [
     'About'=> 'О нас',
     'Products'=> 'Продукты',
     'Category'=> 'Категория',
-    'Categories',
+    'Categories'=>'Категории',
+    'Our Products'=> 'Продукты',
     'Submit',
-    'Our products',
-    ''
 ];
