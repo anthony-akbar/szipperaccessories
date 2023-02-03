@@ -1,4 +1,3 @@
-
 <!-- ======= Constructions Section ======= -->
 @if($categories->isEmpty())
 @else
@@ -18,8 +17,8 @@
                                 </div>
                                 <div class="col-xl-7 d-flex align-items-center">
                                     <div class="card-body">
-                                        <h4 class="card-title">{{$category->title}}</h4>
-                                        <p>{{substr($category->description ,0,100).'...'}}</p>
+                                        <h4 class="card-title">{{$category['title_'.$lang]}}</h4>
+                                        <p>{{substr($category['description_'.$lang] ,0,100).'...'}}</p>
                                     </div>
                                 </div>
                             </div>

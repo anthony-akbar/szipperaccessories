@@ -71,10 +71,10 @@ Route::get('/', function () {
     $partners = Partner::all();
     return view('front.home.index', ['lang' => \Illuminate\Support\Facades\App::getLocale()], compact('sliders', 'categories', 'pullers', 'slidersItem', 'partners'));
 })->name('homepage');
-Route::post('/contact', [ContactController::class, ['lang' => \Illuminate\Support\Facades\App::getLocale()], 'store'])->name('front.contact');
-Route::get('/product', [ProductController::class, ['lang' => \Illuminate\Support\Facades\App::getLocale()], 'index'])->name('productpage');
+Route::post('/contact', [ContactController::class, 'store'])->name('front.contact');
+Route::get('/product', [ProductController::class, 'index'])->name('productpage');
 
 
 Route::group(['prefix' => 'categories'], function () {
-    Route::get('/', [CategoryController::class, ['lang' => \Illuminate\Support\Facades\App::getLocale()], 'index']);
+    Route::get('/', [ CategoryController::class, 'index' ]);
 });

@@ -19,11 +19,11 @@
                             <div class="testimonial-item">
                                 <img src="{{'storage/'.$partner->image}}" class="testimonial-img"
                                      alt="">
-                                <h3>{{$partner->title}}</h3>
-                                <h4>{{$partner->subtitle}}</h4>
+                                <h3>{{$partner['title_'.$lang]}}</h3>
+                                <h4>{{$partner['subtitle_'.$lang]}}</h4>
                                 <p>
                                     <i class="bi bi-quote quote-icon-left"></i>
-                                    {{$partner->description}}
+                                    {{$partner['description_'.$lang]}}
                                     <i class="bi bi-quote quote-icon-right"></i>
                                 </p>
                             </div>

@@ -8,9 +8,9 @@
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-6 text-center">
-                                {{--                                <span>UpConstruction</span>--}}
-                                <h2 data-aos="fade-down">{{$slider->title}}</h2>
-                                <p data-aos="fade-up">{{$slider->description}}</p>
+{{--                                                                <span>UpConstruction</span>--}}
+                                <h2 data-aos="fade-down">{{$slider['title_' . $lang]}}</h2>
+                                <p data-aos="fade-up">{{$slider['description_' . $lang]}}</p>
                                 <a data-aos="fade-up" data-aos-delay="200" href="#get-started"
                                    class="btn-get-started">Get
                                     Started</a>

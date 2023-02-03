@@ -2,5 +2,5 @@
 
 return [
     'Home' => 'Home',
-    'English' => 'English',
+    'Products' => 'Products',
 ];

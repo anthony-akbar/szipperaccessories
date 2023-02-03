@@ -16,11 +16,7 @@ class ProductController extends Controller
         $categories = Category::orderBy('created_at', 'desc')->paginate(1);
         $pullers = Puller::orderBy('created_at', 'desc')->paginate(1);
         $sliders = Slider::orderBy('created_at', 'desc')->paginate(1);
-        return view('front.products.productpage.index', compact('products', 'categories', 'pullers', 'sliders'));
-    }
-
-    public function show() {
-
+        return view('front.products.productpage.index', ['lang' => \Illuminate\Support\Facades\App::getLocale()], compact('products', 'categories', 'pullers', 'sliders'));
     }
 }
 //$categories = Category::all();

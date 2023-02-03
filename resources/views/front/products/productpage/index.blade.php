@@ -26,7 +26,7 @@
 
                 <ul class="portfolio-flters" data-aos="fade-up" data-aos-delay="100">
                     @foreach($categories as $category)
-                        <li data-filter=".filter-{{ str_replace(' ', '_' , strtolower($category->title)) }}">{{ $category->title }}</li>
+                        <li data-filter=".filter-{{ str_replace(' ', '_' , strtolower($category['title_'.$lang])) }}">{{ $category['title_'.$lang] }}</li>
                     @endforeach
                     <li class="filter-active" data-filter=".filter-pullers">Pullers</li>
                     <li data-filter=".filter-sliders">Sliders</li>
@@ -36,7 +36,7 @@
                     @foreach($categories as $category)
                         @foreach($category->products as $product)
                             <div
-                                class="col-lg-4 col-md-6 portfolio-item filter-{{ str_replace(' ', '_' , strtolower($category->title)) }}">
+                                class="col-lg-4 col-md-6 portfolio-item filter-{{ str_replace(' ', '_' , strtolower($category['title_'.$lang])) }}">
                                 <div class="portfolio-content h-100 mb-4">
                                     <div
                                         style="background-image: url({{'storage/'. $product->image }}); background-size: cover; background-position: center;"
@@ -59,9 +59,9 @@
 
                             </div><!-- End Projects Item -->
                         @endforeach
-                            <div class="filter-pullers">
-                                {{$categories->withQueryString()->links()}}
-                            </div>
+                        <div class="filter-pullers">
+                            {{$categories->withQueryString()->links()}}
+                        </div>
                     @endforeach
                     @foreach($pullers as $puller)
                         <div class="col-lg-4 col-md-6 portfolio-item filter-pullers">

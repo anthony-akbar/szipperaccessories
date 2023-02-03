@@ -2,5 +2,5 @@
 
 return [
     'Home' => 'Bosh Sahifa',
-    'English' => 'Inglizcha',
+    'Products'=> 'Mahsulotlar',
 ];
