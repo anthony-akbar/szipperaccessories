@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
     <title>S. Zipper Accessories</title>
-    @foreach($categories as $category)
-        <meta content="{{$category['title_'.$lang]}}" name="keywords">
-        <meta content="{{$category['description_'.$lang]}}" name="description">
-    @endforeach
-    <meta content="zipper" name="keywords">
-    <meta content="szipper" name="keywords">
+    <meta name="description" content="zipper">
+    <meta name="keywords" content="s zipper">
+    <meta name="author"  content="S. Zipper Accessories" >
+    <meta name="keywords" content="szipper">
+    <meta http-equiv="refresh" content="30">
     <meta content="szipperaccesspries" name="keywords">
     <meta content="s zipper" name="keywords">
     <meta content="s-zipper" name="keywords">
     <meta content="tashkent" name="keywords">
     <meta property="og:title" content="S. Zipper Accessories">
+    <meta property="og:site_name" content="s-zipper.uz">
     <meta property="og:url" content="http://s-zipper.uz">
+    <meta property="og:type" content="website">
     <meta property="og:image" content="{{asset('logo-black.svg')}}">
     <meta property="og:description"
+          content="Первое производство молний в Узбекистане. Мы не посредники. Мы гарантируем: - стабильно высокое качество продукции; - широкий ассортимент предлагаемых застежек 'молний' и сырья; - высокое качество обслуживания и сопровождения заказов. У нас размещают заказы крупнейшие производители одежды, кожгалантереи, обуви. Лидеры легкой промышленности Узбекистана, России, Украины, Белоруссии и Казахстана.">
+    <meta name="itemprop"
           content="Первое производство молний в Узбекистане. Мы не посредники. Мы гарантируем: - стабильно высокое качество продукции; - широкий ассортимент предлагаемых застежек 'молний' и сырья; - высокое качество обслуживания и сопровождения заказов. У нас размещают заказы крупнейшие производители одежды, кожгалантереи, обуви. Лидеры легкой промышленности Узбекистана, России, Украины, Белоруссии и Казахстана.">
     <meta name="description"
           content="Первое производство молний в Узбекистане. Мы не посредники. Мы гарантируем: - стабильно высокое качество продукции; - широкий ассортимент предлагаемых застежек 'молний' и сырья; - высокое качество обслуживания и сопровождения заказов. У нас размещают заказы крупнейшие производители одежды, кожгалантереи, обуви. Лидеры легкой промышленности Узбекистана, России, Украины, Белоруссии и Казахстана.">
