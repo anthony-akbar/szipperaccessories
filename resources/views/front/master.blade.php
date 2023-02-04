@@ -13,6 +13,11 @@
     <meta content="s zipper" name="keywords">
     <meta content="s-zipper" name="keywords">
     <meta content="tashkent" name="keywords">
+    <meta property="og:title" content="S. Zipper Accessories">
+    <meta property="og:url" content="http://s-zipper.uz">
+    <meta property="og:image" content="{{asset('logo-black.svg')}}">
+    <meta property="og:description" content="S. Zipper Accessories S. Zipper Accessories S. Zipper Accessories S. Zipper Accessories S. Zipper Accessories S. Zipper Accessories S. Zipper Accessories S. Zipper Accessories S. Zipper Accessories S. Zipper Accessories S. Zipper Accessories S. Zipper Accessories v S. Zipper Accessories">
+    <meta name="description" content="S. Zipper Accessories S. Zipper Accessories S. Zipper Accessories S. Zipper Accessories S. Zipper Accessories S. Zipper Accessories S. Zipper Accessories S. Zipper Accessories S. Zipper Accessories S. Zipper Accessories S. Zipper Accessories S. Zipper Accessories v S. Zipper Accessories">
     <!-- Favicons -->
     <link href="{{asset('logo-black.svg')}}" rel="icon">
     <link href="{{asset('assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
