@@ -16,8 +16,8 @@
     <meta property="og:title" content="S. Zipper Accessories">
     <meta property="og:url" content="http://s-zipper.uz">
     <meta property="og:image" content="{{asset('logo-black.svg')}}">
-    <meta property="og:description" content="S. Zipper Accessories S. Zipper Accessories S. Zipper Accessories S. Zipper Accessories S. Zipper Accessories S. Zipper Accessories S. Zipper Accessories S. Zipper Accessories S. Zipper Accessories S. Zipper Accessories S. Zipper Accessories S. Zipper Accessories v S. Zipper Accessories">
-    <meta name="description" content="S. Zipper Accessories S. Zipper Accessories S. Zipper Accessories S. Zipper Accessories S. Zipper Accessories S. Zipper Accessories S. Zipper Accessories S. Zipper Accessories S. Zipper Accessories S. Zipper Accessories S. Zipper Accessories S. Zipper Accessories v S. Zipper Accessories">
+    <meta property="og:description" content="Первое производство молний в Узбекистане. Мы не посредники. Мы гарантируем: - стабильно высокое качество продукции; - широкий ассортимент предлагаемых застежек 'молний' и сырья; - высокое качество обслуживания и сопровождения заказов. У нас размещают заказы крупнейшие производители одежды, кожгалантереи, обуви. Лидеры легкой промышленности Узбекистана, России, Украины, Белоруссии и Казахстана.">
+    <meta name="description" content="Первое производство молний в Узбекистане. Мы не посредники. Мы гарантируем: - стабильно высокое качество продукции; - широкий ассортимент предлагаемых застежек 'молний' и сырья; - высокое качество обслуживания и сопровождения заказов. У нас размещают заказы крупнейшие производители одежды, кожгалантереи, обуви. Лидеры легкой промышленности Узбекистана, России, Украины, Белоруссии и Казахстана.">
     <!-- Favicons -->
     <link href="{{asset('logo-black.svg')}}" rel="icon">
     <link href="{{asset('assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
