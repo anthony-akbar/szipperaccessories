@@ -59,9 +59,9 @@
 
                             </div><!-- End Projects Item -->
                         @endforeach
-                        <div class="filter-pullers">
-                            {{$categories->withQueryString()->links()}}
-                        </div>
+{{--                        <div class="filter-pullers">--}}
+{{--                            {{$categories->withQueryString()->links()}}--}}
+{{--                        </div>--}}
                     @endforeach
                     @foreach($pullers as $puller)
                         <div class="col-lg-4 col-md-6 portfolio-item filter-pullers">
@@ -83,9 +83,9 @@
                                             class="bi bi-link-45deg"></i></a>
                                 </div>
                             </div>
-                            <div class="filter-pullers">
-                                {{$pullers->withQueryString()->links()}}
-                            </div>
+{{--                            <div class="filter-pullers">--}}
+{{--                                {{$pullers->withQueryString()->links()}}--}}
+{{--                            </div>--}}
                         </div><!-- End Projects Item -->
                     @endforeach
 
@@ -108,9 +108,9 @@
                                             class="bi bi-link-45deg"></i></a>
                                 </div>
                             </div>
-                            <div class="filter-sliders">
-                                {{$sliders->withQueryString()->links()}}
-                            </div>
+{{--                            <div class="filter-sliders">--}}
+{{--                                {{$sliders->withQueryString()->links()}}--}}
+{{--                            </div>--}}
                         </div><!-- End Projects Item -->
                     @endforeach
                 </div><!-- End Projects Container -->
