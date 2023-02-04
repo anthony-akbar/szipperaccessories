@@ -15,6 +15,7 @@ use App\Models\Partner;
 use App\Models\Puller;
 use App\Models\Slider;
 use App\Models\SliderItem;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => '\App\Http\Controllers\LanguageController@switchLang']);
@@ -84,3 +85,5 @@ Route::get('/zippers', [ CategoryController::class, 'zipper'])->name('front.zipp
 Route::get('/sliders', [ CategoryController::class, 'slider'])->name('front.sliders.show');
 Route::get('/pullers', [ CategoryController::class, 'puller'])->name('front.pullers.show');
 
+
+Auth::routes();
