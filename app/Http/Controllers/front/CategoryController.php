@@ -12,25 +12,33 @@ use Illuminate\Support\Facades\App;
 
 class CategoryController extends Controller
 {
-    public function index() {
+    public function index()
+    {
         $categories = Category::all();
-        return view('front.categoriespage.index', ['lang' => \Illuminate\Support\Facades\App::getLocale()], compact('categories'));
+        return view('front.categoriespage.index', ['lang' => App::getLocale()], compact('categories'));
     }
 
-    public function show($id) {
+    public function show($id)
+    {
         $category = Category::find($id);
-        return view('front.categories.show', ['lang' => App::getLocale()],compact('category'));
+        return view('front.categories.show', ['lang' => App::getLocale()], compact('category'));
     }
-    public function zipper() {
+
+    public function zipper()
+    {
         $products = Product::all();
-        return view('front.zippers.show', ['lang' => App::getLocale()],compact('products'));
+        return view('front.zippers.show', ['lang' => App::getLocale()], compact('products'));
     }
-    public function slider() {
+
+    public function slider()
+    {
         $products = Slider::all();
-        return view('front.sliders.show', ['lang' => App::getLocale()],compact('products'));
+        return view('front.sliders.show', ['lang' => App::getLocale()], compact('products'));
     }
-    public function puller() {
+
+    public function puller()
+    {
         $products = Puller::all();
-        return view('front.pullers.show', ['lang' => App::getLocale()],compact('products'));
+        return view('front.pullers.show', ['lang' => App::getLocale()], compact('products'));
     }
 }

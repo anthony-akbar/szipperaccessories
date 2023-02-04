@@ -7,8 +7,12 @@
 
     <title>S. Zipper Accessories</title>
     <meta content="" name="description">
-    <meta content="" name="keywords">
-
+    <meta content="zipper" name="keywords">
+    <meta content="szipper" name="keywords">
+    <meta content="szipperaccesspries" name="keywords">
+    <meta content="s zipper" name="keywords">
+    <meta content="s-zipper" name="keywords">
+    <meta content="tashkent" name="keywords">
     <!-- Favicons -->
     <link href="{{asset('logo-black.svg')}}" rel="icon">
     <link href="{{asset('assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
