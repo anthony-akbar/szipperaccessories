@@ -4,6 +4,23 @@
     <title>S. Zipper Accessories</title>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="title" content="s-zipper">
+    <meta name="title" content="s zipper">
+    <meta name="title" content="s zipper">
+    <meta name="title" content="s zipper">
+    <meta name="title" content="s zipper">
+    <meta name="title" content="s zipper">
+    <meta name="title" content="szipper">
+    <meta name="title" content="szipper">
+    <meta name="title" content="szipper">
+    <meta name="title" content="szipper">
+    <meta name="title" content="szipper">
+    <meta name="title" content="s-zipper">
+    <meta name="title" content="s-zipper">
+    <meta name="title" content="s-zipper">
+    <meta name="title" content="s-zipper">
+    <meta name="title" content="s-zipper">
+    <meta name="title" content="s-zipper">
     <meta name="title" content="textile">
     <meta itemprop="og:image" content="{{asset('logo.svg')}}">
     <meta name="title" content="textile uz">
