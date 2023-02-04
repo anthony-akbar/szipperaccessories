@@ -5,6 +5,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>S. Zipper Accessories</title>
     <meta name="title" content="textile">
+    <meta itemprop="og:image" content="{{asset('logo.svg')}}">
     <meta name="title" content="textile uz">
     <meta name="description" content="Первое производство молний в Узбекистане. Мы не посредники. Мы гарантируем:
 - стабильно высокое качество продукции;
