@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>S. Zipper Accessories</title>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>S. Zipper Accessories</title>
     <meta name="title" content="textile">
     <meta itemprop="og:image" content="{{asset('logo.svg')}}">
     <meta name="title" content="textile uz">
@@ -27,6 +27,8 @@
     Тип бизнеса: Производитель
     Год основания: 2019
     Количество сотрудников: 11 - 50 чел."/>
+    <meta property='og:site_name' content='s-zipper.uz'>
+    <meta property='og:type' content='website'>
     <!-- Favicons -->
     <link href="{{asset('logo-black.svg')}}" rel="icon">
     <link href="{{asset('assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
