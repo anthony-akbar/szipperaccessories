@@ -82,14 +82,14 @@
         <div class="container">
             <div class="row">
 
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-3">
                     <div class="footer-info">
-                        <h3>S-Zipper</h3>
-                        <p>
-                            A108 Adam Street <br>
-                            NY 535022, USA<br><br>
-                            <strong>Phone:</strong> +1 5589 55488 55<br>
-                            <strong>Email:</strong> info@example.com<br>
+                        <h3>S. Zipper Accessories</h3>
+                        <p>Адрес: <br>
+                            г. Ташкент, Бектемирский р-н,<br>
+                            ул. Олтинтопган, дом 49<br><br>
+                            <strong>Телефон:</strong> +1 5589 55488 55<br>
+                            <strong>Электронная почта:</strong> info@szipperaccessories.uz<br>
                         </p>
                         <div class="social-links d-flex mt-3">
                             <a href="#" class="d-flex align-items-center justify-content-center"><i
@@ -104,32 +104,25 @@
                     </div>
                 </div><!-- End footer info column-->
 
-                <div class="col-lg-2 col-md-3 footer-links">
+                <div class="col-lg-4 col-md-3 footer-links">
+                    <h4>Полезные ссылки</h4>
                     <ul>
+                        <li><a href="{{ route('front.zippers.show') }}">Zippers</a></li>
+                        <li><a href="{{ route('front.sliders.show') }}">Sliders</a></li>
+                        <li><a href="{{ route('front.pullers.show') }}">Pullers</a></li>
+                        <li><a href="{{ route('front.category') }}">Категории</a></li>
+                        <li><a href="{{ route('productpage') }}">Продукты</a></li>
                     </ul>
                 </div><!-- End footer links column-->
+                <div class="col-lg-2 col-md-3 footer-links">
+                    <ul>
+                        <li><h4>График работы :</h4><span style="color: rgba(255, 255, 255, 0.6);transition: 0.3s;
+                        display: inline-block;line-height: 1;">Пн-Сб 8:00-18:00</span></li>
 
-                <div class="col-lg-2 col-md-3 footer-links">
-                    <h4>Our Services</h4>
-                    <ul>
-                        <li><a href="#">Web Design</a></li>
-                        <li><a href="#">Web Development</a></li>
-                        <li><a href="#">Product Management</a></li>
-                        <li><a href="#">Marketing</a></li>
-                        <li><a href="#">Graphic Design</a></li>
+                        <li><a href="#get-started">Контакты</a></li>
+                        <li><a href="#get-started">Связаться с нами</a></li>
                     </ul>
                 </div><!-- End footer links column-->
-                <div class="col-lg-2 col-md-3 footer-links">
-                    <h4>Nobis illum</h4>
-                    <ul>
-                        <li><a href="#">Ipsam</a></li>
-                        <li><a href="#">Laudantium dolorum</a></li>
-                        <li><a href="#">Dinera</a></li>
-                        <li><a href="#">Trodelas</a></li>
-                        <li><a href="#">Flexo</a></li>
-                    </ul>
-                </div><!-- End footer links column-->
-
             </div>
         </div>
     </div>

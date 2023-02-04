@@ -120,5 +120,15 @@ l-193 96 0 191 c0 210 -6 236 -60 264 -41 21 -1107 22 -1157 0z m1007 -374 c0
                 <div class="side-menu__title">Partners</div>
             </a>
         </li>
+        <li>
+            <a href="{{ route('admin.about') }}" class="side-menu">
+                <div class="side-menu__icon">
+                    {{--ICON--}}
+                </div>
+                <div class="side-menu__title">
+                    About Us
+                </div>
+            </a>
+        </li>
     </ul>
 </nav>

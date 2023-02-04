@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\admin\AboutController;
 use App\Http\Controllers\admin\DashboardController;
 use App\Http\Controllers\admin\PartnersController;
 use App\Http\Controllers\admin\SliderController;
@@ -61,6 +62,9 @@ Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function () {
         Route::get('/search', [PartnersController::class, 'search'])->name('admin.partners.search');
         Route::post('/{id}/edit', [PartnersController::class, 'edit'])->name('admin.partners.edit');
         Route::delete('/{id}', [PartnersController::class, 'destroy'])->name('admin.partners.delete');
+    });
+    Route::group(['prefix'=>'about'], function () {
+        Route::get('/', [AboutController::class, 'index'])->name('admin.about');
     });
 });
 
