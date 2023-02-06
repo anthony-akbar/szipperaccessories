@@ -42,7 +42,7 @@
                                    style="cursor: pointer">
                                 <div class="flex flex-col items-center justify-center pt-7 center">
                                     <div class="form-input2">
-                                            <img class="w-100 h-32" id="file-ip-1-preview">
+                                        <img class="w-100 h-32" id="file-ip-1-preview">
                                         <input type="file" style="cursor: pointer" class="opacity-0 fallback"
                                                name="image"
                                                id="file-ip-1"
