@@ -90,4 +90,8 @@ Route::get('/sliders', [ CategoryController::class, 'slider'])->name('front.slid
 Route::get('/pullers', [ CategoryController::class, 'puller'])->name('front.pullers.show');
 
 
-Auth::routes();
+//Auth::routes();
+
+//Auth::routes();
+
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

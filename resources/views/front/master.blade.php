@@ -131,6 +131,7 @@
         <div class="container">
             <div class="credits">
                 Designed by <a href="https://royale.uz/">Royal</a>
+                <span>Copyright</span>
             </div>
         </div>
     </div>

@@ -29,7 +29,7 @@
                         @endforeach
                     </ul><!-- .dropdown-menu end -->
                 </li><!-- .dropdown end -->
-                <li><a href="#">+996 (755) 99 99 29</a></li>
+                <li><a href="tel:+996755999929">+996 (755) 99 99 29</a></li>
             </ul>
         </nav><!-- .navbar -->
 

@@ -18,7 +18,6 @@ return [
     'Category'=> 'Категория',
     'Categories'=>'Категории',
     'Our Products'=> 'Продукты',
-    'Submit',
     'Get Started'=> 'Начать',
     'Contact us for cooperation.'=> 'Свяжитесь с нами по вопросам сотрудничества.',
 ];
