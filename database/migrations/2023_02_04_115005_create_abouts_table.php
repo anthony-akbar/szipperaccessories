@@ -15,9 +15,14 @@ return new class extends Migration
     {
         Schema::create('abouts', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('address')->nullable();
+            $table->string('title_en');
+            $table->string('title_ru');
+            $table->string('title_uz');
+            $table->string('address_en')->nullable();
+            $table->string('address_ru')->nullable();
+            $table->string('address_uz')->nullable();
             $table->string('phone')->nullable();
+            $table->string('schedule');
             $table->string('facebook')->nullable();
             $table->string('instagram')->nullable();
             $table->string('telegram')->nullable();

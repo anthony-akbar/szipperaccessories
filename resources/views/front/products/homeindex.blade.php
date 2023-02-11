@@ -13,8 +13,8 @@
                 @foreach($categories as $category)
                     <li data-filter=".filter-{{ str_replace(' ', '_' , strtolower($category['title_'.$lang])) }}">{{ $category['title_'.$lang] }}</li>
                 @endforeach
-                <li class="filter-active" data-filter=".filter-pullers">Pullers</li>
-                <li data-filter=".filter-sliders">Sliders</li>
+                <li class="filter-active" data-filter=".filter-pullers">{{__('front.Pullers')}}</li>
+                <li data-filter=".filter-sliders">{{__('front.Sliders')}}</li>
             </ul><!-- End Projects Filters -->
 
             <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">

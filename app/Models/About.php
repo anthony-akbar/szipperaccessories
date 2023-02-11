@@ -12,9 +12,14 @@ class About extends Model
     use SoftDeletes;
 
     protected $fillable = [
-        'title',
-        'address',
+        'title_en',
+        'title_ru',
+        'title_uz',
+        'address_en',
+        'address_ru',
+        'address_uz',
         'phone',
+        'schedule',
         'facebook',
         'instagram',
         'telegram'

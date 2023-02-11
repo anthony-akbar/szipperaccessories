@@ -23,6 +23,16 @@ class SliderController extends Controller
         return redirect()->route('admin.slider');
     }
 
+    public function edit(Request $request, $id)
+    {
+
+        $data = $request->all();
+        $data['image'] = Storage::put('/images', $request['image']);
+        $product = SliderItem::find($id);
+        $product->update($data);
+        return redirect()->route('admin.slider');
+    }
+
     public function destroy($id)
     {
         SliderItem::destroy($id);

@@ -11,6 +11,7 @@ use App\Http\Controllers\admin\zipper\SlidersController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\front\CategoryController;
 use App\Http\Controllers\front\ProductController;
+use App\Models\About;
 use App\Models\Category;
 use App\Models\Partner;
 use App\Models\Puller;
@@ -25,6 +26,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function () {
     Route::group(['prefix' => 'slider'], function () {
         Route::get('/', [SliderController::class, 'index'])->name('admin.slider');
         Route::post('/store', [SliderController::class, 'store'])->name('admin.slider.store');
+        Route::post('/{id}/edit', [SliderController::class, 'edit'])->name('admin.slider.edit');
         Route::delete('/{id}', [SliderController::class, 'destroy'])->name('admin.slider.delete');
     });
     Route::group(['prefix' => 'zipper', 'namespace' => 'zipper'], function () {
@@ -63,8 +65,9 @@ Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function () {
         Route::post('/{id}/edit', [PartnersController::class, 'edit'])->name('admin.partners.edit');
         Route::delete('/{id}', [PartnersController::class, 'destroy'])->name('admin.partners.delete');
     });
-    Route::group(['prefix'=>'about'], function () {
+    Route::group(['prefix' => 'about'], function () {
         Route::get('/', [AboutController::class, 'index'])->name('admin.about');
+        Route::post('/store', [AboutController::class, 'store'])->name('admin.about.store');
     });
 });
 
@@ -74,7 +77,8 @@ Route::get('/', function () {
     $pullers = Puller::orderBy('created_at', 'desc')->paginate(3);
     $sliders = Slider::orderBy('created_at', 'desc')->paginate(3);
     $partners = Partner::all();
-    return view('front.home.index', ['lang' => \Illuminate\Support\Facades\App::getLocale()], compact('sliders', 'categories', 'pullers', 'slidersItem', 'partners'));
+    $abouts = About::all();
+    return view('front.home.index', ['lang' => \Illuminate\Support\Facades\App::getLocale()], compact('sliders', 'categories', 'pullers', 'slidersItem', 'partners', 'abouts'));
 })->name('homepage');
 Route::post('/contact', [ContactController::class, 'store'])->name('front.contact');
 Route::get('/product', [ProductController::class, 'index'])->name('productpage');
@@ -82,12 +86,12 @@ Route::get('/product/{id}', [ProductController::class, 'show'])->name('product.s
 
 
 Route::group(['prefix' => 'categories'], function () {
-    Route::get('/', [ CategoryController::class, 'index' ])->name('front.category');
-    Route::get('/{id}', [ CategoryController::class, 'show' ])->name('front.category.show');
+    Route::get('/', [CategoryController::class, 'index'])->name('front.category');
+    Route::get('/{id}', [CategoryController::class, 'show'])->name('front.category.show');
 });
-Route::get('/zippers', [ CategoryController::class, 'zipper'])->name('front.zippers.show');
-Route::get('/sliders', [ CategoryController::class, 'slider'])->name('front.sliders.show');
-Route::get('/pullers', [ CategoryController::class, 'puller'])->name('front.pullers.show');
+Route::get('/zippers', [CategoryController::class, 'zipper'])->name('front.zippers.show');
+Route::get('/sliders', [CategoryController::class, 'slider'])->name('front.sliders.show');
+Route::get('/pullers', [CategoryController::class, 'puller'])->name('front.pullers.show');
 
 
 //Auth::routes();

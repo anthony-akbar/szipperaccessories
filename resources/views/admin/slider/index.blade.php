@@ -110,11 +110,12 @@
                             </div>
                         </div>
                         <div class="flex justify-center lg:justify-end items-center p-5 border-t border-slate-200/60 dark:border-darkmode-400">
+                           @include('admin.slider.edit')
                             <!-- BEGIN: Modal Toggle -->
                             <a href="javascript:;" data-tw-toggle="modal"
                                data-tw-target="#delete-modal-preview-{{$item->id}}"
-                               class="flex items-center mr-auto text-danger">
-                                <i data-lucide="trash-2" class="px-1 text-danger"></i>
+                               class="flex text-danger ">
+                                <i data-lucide="trash-2" class="text-danger"></i>
                                 Delete</a>
                             <!-- END: Modal Toggle -->
                             <!-- BEGIN: Modal Content -->

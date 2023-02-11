@@ -81,48 +81,48 @@
     <div class="footer-content position-relative">
         <div class="container">
             <div class="row">
-
-                <div class="col-lg-4 col-md-3">
-                    <div class="footer-info">
-                        <h3>S. Zipper Accessories</h3>
-                        <p>Адрес: <br>
-                            г. Ташкент, Бектемирский р-н,<br>
-                            ул. Олтинтопган, дом 49<br><br>
-                            <strong>Телефон:</strong> +1 5589 55488 55<br>
-                            <strong>Электронная почта:</strong> info@szipperaccessories.uz<br>
-                        </p>
-                        <div class="social-links d-flex mt-3">
-                            <a href="#" class="d-flex align-items-center justify-content-center"><i
-                                    class="bi bi-twitter"></i></a>
-                            <a href="#" class="d-flex align-items-center justify-content-center"><i
-                                    class="bi bi-facebook"></i></a>
-                            <a href="#" class="d-flex align-items-center justify-content-center"><i
-                                    class="bi bi-instagram"></i></a>
-                            <a href="#" class="d-flex align-items-center justify-content-center"><i
-                                    class="bi bi-linkedin"></i></a>
+                @foreach($abouts as $about)
+                    <div class="col-lg-4 col-md-3">
+                        <div class="footer-info">
+                            <h3>{{$about['title_'.$lang]}}</h3>
+                            <p>{{__('front.Address')}}: <br>
+                                {{$about['address_'.$lang]}}
+                                <br><br>
+                                <strong>{{__('front.Telephone')}}: </strong>{{$about->phone}}<br>
+                                <strong>Электронная почта:</strong> info@szipperaccessories.uz<br>
+                            </p>
+                            <div class="social-links d-flex mt-3">
+                                <a href="{{$about->facebook}}" class="d-flex align-items-center justify-content-center"><i
+                                        class="bi bi-facebook"></i></a>
+                                <a href="{{$about->instagram}}"
+                                   class="d-flex align-items-center justify-content-center"><i
+                                        class="bi bi-instagram"></i></a>
+                                <a href="{{$about->telegram}}" class="d-flex align-items-center justify-content-center"><i
+                                        class="bi bi-telegram"></i></a>
+                            </div>
                         </div>
-                    </div>
-                </div><!-- End footer info column-->
+                    </div><!-- End footer info column-->
 
-                <div class="col-lg-4 col-md-3 footer-links">
-                    <h4>Полезные ссылки</h4>
-                    <ul>
-                        <li><a href="{{ route('front.zippers.show') }}">Zippers</a></li>
-                        <li><a href="{{ route('front.sliders.show') }}">Sliders</a></li>
-                        <li><a href="{{ route('front.pullers.show') }}">Pullers</a></li>
-                        <li><a href="{{ route('front.category') }}">Категории</a></li>
-                        <li><a href="{{ route('productpage') }}">Продукты</a></li>
-                    </ul>
-                </div><!-- End footer links column-->
-                <div class="col-lg-2 col-md-3 footer-links">
-                    <ul>
-                        <li><h4>График работы :</h4><span style="color: rgba(255, 255, 255, 0.6);transition: 0.3s;
-                        display: inline-block;line-height: 1;">Пн-Сб 8:00-18:00</span></li>
+                    <div class="col-lg-4 col-md-3 footer-links">
+                        <h4>{{__('front.Useful links')}}:</h4>
+                        <ul>
+                            <li><a href="{{ route('front.zippers.show') }}">{{__('front.Zippers')}}</a></li>
+                            <li><a href="{{ route('front.sliders.show') }}">{{__('front.Sliders')}}</a></li>
+                            <li><a href="{{ route('front.pullers.show') }}">{{__('front.Pullers')}}</a></li>
+                            <li><a href="{{ route('front.category') }}">{{__('front.Categories')}}</a></li>
+                            <li><a href="{{ route('productpage') }}">{{__('front.Products')}}</a></li>
+                        </ul>
+                    </div><!-- End footer links column-->
+                    <div class="col-lg-2 col-md-3 footer-links">
+                        <ul>
+                            <li><h4>{{__('front.Schedule')}}:</h4><span style="color: rgba(255, 255, 255, 0.6);transition: 0.3s;
+                        display: inline-block;line-height: 1;">{{$about->schedule}}</span></li>
 
-                        <li><a href="#get-started">Контакты</a></li>
-                        <li><a href="#get-started">Связаться с нами</a></li>
-                    </ul>
-                </div><!-- End footer links column-->
+                            <li><a href="#get-started">{{__('front.Contacts')}}</a></li>
+                            <li><a href="#get-started">{{__('front.Contact us')}}</a></li>
+                        </ul>
+                    </div><!-- End footer links column-->
+                @endforeach
             </div>
         </div>
     </div>
