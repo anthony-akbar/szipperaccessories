@@ -343,12 +343,12 @@
                         <hr class="dropdown-divider border-white/[0.08]">
                     </li>
                     <li>
-                        <a class="dropdown-item hover:bg-white/5" href="{{ route('logout') }}"
+                        <a class="dropdown-item hover:bg-white/5" href="{{--{{ route('logout') }}--}}"
                            onclick="event.preventDefault();
                             document.getElementById('logout-form').submit();">
                             <i data-lucide="toggle-right" class="mr-2"></i>
                             {{ __('Logout') }}
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            <form id="logout-form" action="{{--{{ route('logout') }}--}}" method="POST" class="d-none">
                                 @csrf
                             </form>
                         </a>
