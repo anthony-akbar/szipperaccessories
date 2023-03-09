@@ -12,7 +12,7 @@
                             {{$about['address_'.$lang]}}
                             <br><br>
                             <strong>{{__('front.Telephone')}}: </strong>{{$about->phone}}<br>
-                            <strong>Электронная почта:</strong> info@szipperaccessories.uz<br>
+                            <strong>{{__('front.Email')}}:</strong> info@szipperaccessories.uz<br>
                         </p>
                         <div class="social-links d-flex mt-3">
                             @if($about->facebook != null)

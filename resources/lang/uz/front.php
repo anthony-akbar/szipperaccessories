@@ -25,6 +25,5 @@ return [
     'Our Products' => 'Mahsulotlar',
     'Get Started' => 'Boshlash',
     'Contact us for cooperation.' => 'Hamkorlik uchun biz bilan bog`laning.',
-    'All'=>'Umumiy'
-
+    'All'=>'Umumiy',
 ];

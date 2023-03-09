@@ -25,5 +25,5 @@ return [
     'Our Products' => 'Our Products',
     'Get Started' => 'Get Started',
     'Contact us for cooperation.' => 'Contact us for cooperation.',
-    'All'=>'All'
+    'All'=>'All',
 ];

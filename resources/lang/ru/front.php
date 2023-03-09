@@ -27,5 +27,5 @@ return [
     'Our Products'=> 'Продукты',
     'Get Started'=> 'Начать',
     'Contact us for cooperation.'=> 'Свяжитесь с нами по вопросам сотрудничества.',
-    'All' => 'Все'
+    'All' => 'Все',
 ];
