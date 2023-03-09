@@ -2,7 +2,7 @@
 @section('content')
 
     <!-- ======= Breadcrumbs ======= -->
-    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/breadcrumbs-bg.jpg');">
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/footer-bg.jpg');">
         <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
 
             <h2>{{__('front.Categories')}}</h2>
@@ -32,7 +32,7 @@
                                     <div class="col-xl-7 d-flex align-items-center">
                                         <div class="card-body">
                                             <h4 class="card-title">{{$category['title_'.$lang]}}</h4>
-                                            <p>{{$category['description_'.$lang] }}</p>
+                                            <p>{{substr($category['description_'.$lang] ,0,150).'...'}}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -40,36 +40,6 @@
                         </div>
                     </div><!-- End Card Item -->
                 @endforeach
-                <a href="{{ route('front.pullers.show') }}" class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card-item">
-                        <div class="row">
-                            <div class="col-xl-5">
-                                <div class="card-bg"
-                                     style="background-image: url({{'storage/'.$category->image}});"></div>
-                            </div>
-                            <div class="col-xl-7 d-flex align-items-center">
-                                <div class="card-body">
-                                    <h4 class="card-title">Pullers</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a><!-- End Card Item -->
-                <a href="{{ route('front.sliders.show') }}" class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card-item">
-                        <div class="row">
-                            <div class="col-xl-5">
-                                <div class="card-bg"
-                                     style="background-image: url({{'storage/'.$category->image}});"></div>
-                            </div>
-                            <div class="col-xl-7 d-flex align-items-center">
-                                <div class="card-body">
-                                    <h4 class="card-title">Sliders</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a><!-- End Card Item -->
 
             </div>
         </div>

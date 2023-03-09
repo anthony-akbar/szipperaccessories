@@ -14,11 +14,11 @@ class ProductController extends Controller
     public function index()
     {
         $abouts = About::all();
-        $products = Product::orderBy('created_at', 'desc')->paginate(3);
-        $categories = Category::orderBy('created_at', 'desc')->paginate(1);
-        $pullers = Puller::orderBy('created_at', 'desc')->paginate(1);
-        $sliders = Slider::orderBy('created_at', 'desc')->paginate(1);
-        return view('front.products.productpage.index', ['lang' => \Illuminate\Support\Facades\App::getLocale()], compact('products', 'categories', 'pullers', 'sliders','abouts'));
+        $products = Product::orderBy('created_at', 'desc')->get();
+        $categories = Category::orderBy('created_at', 'desc')->get();
+        $pullers = Puller::orderBy('created_at', 'desc')->get();
+        $sliders = Slider::orderBy('created_at', 'desc')->get();
+        return view('front.pages.products.index', ['lang' => \Illuminate\Support\Facades\App::getLocale()], compact('products', 'categories', 'pullers', 'sliders','abouts'));
     }
 
     public function show($id) {
@@ -26,6 +26,3 @@ class ProductController extends Controller
     }
 
 }
-//$categories = Category::all();
-//$sliders = Slider::orderBy('created_at', 'desc')->paginate(12);
-//return view('admin.zipper.sliders.index', compact('sliders', 'categories'));

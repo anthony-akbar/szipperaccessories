@@ -29,34 +29,11 @@ Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function () {
         Route::post('/{id}/edit', [SliderController::class, 'edit'])->name('admin.slider.edit');
         Route::delete('/{id}', [SliderController::class, 'destroy'])->name('admin.slider.delete');
     });
-    Route::group(['prefix' => 'zipper', 'namespace' => 'zipper'], function () {
-        Route::group(['prefix' => 'categories', 'namespace' => 'categories'], function () {
-            Route::get('/', [CategoriesController::class, 'index'])->name('admin.zipper.categories');
-            Route::post('/store', [CategoriesController::class, 'store'])->name('admin.zipper.categories.store');
-            Route::delete('/{id}', [CategoriesController::class, 'destroy'])->name('admin.zipper.categories.delete');
-            Route::get('/{id}', [CategoriesController::class, 'show'])->name('admin.zipper.categories.show');
-        });
-        Route::group(['prefix' => 'products', 'namespace' => 'products'], function () {
-            Route::get('/', [ProductsController::class, 'index'])->name('admin.zipper.products');
-            Route::post('/store', [ProductsController::class, 'store'])->name('admin.zipper.products.store');
-            Route::get('/search', [ProductsController::class, 'search'])->name('admin.zipper.products.search');
-            Route::post('/{id}/edit', [ProductsController::class, 'edit'])->name('admin.zipper.products.edit');
-            Route::delete('/{id}', [ProductsController::class, 'destroy'])->name('admin.zipper.products.delete');
-        });
-        Route::group(['prefix' => 'pullers', 'namespace' => 'pullers'], function () {
-            Route::get('/', [PullersController::class, 'index'])->name('admin.zipper.pullers');
-            Route::post('/store', [PullersController::class, 'store'])->name('admin.zipper.pullers.store');
-            Route::get('/search', [PullersController::class, 'search'])->name('admin.zipper.pullers.search');
-            Route::post('/{id}/edit', [PullersController::class, 'edit'])->name('admin.zipper.pullers.edit');
-            Route::delete('/{id}', [PullersController::class, 'destroy'])->name('admin.zipper.pullers.delete');
-        });
-        Route::group(['prefix' => 'sliders', 'namespace' => 'sliders'], function () {
-            Route::get('/', [SlidersController::class, 'index'])->name('admin.zipper.sliders');
-            Route::post('/store', [SlidersController::class, 'store'])->name('admin.zipper.sliders.store');
-            Route::get('/search', [SlidersController::class, 'search'])->name('admin.zipper.sliders.search');
-            Route::post('/{id}/edit', [SlidersController::class, 'edit'])->name('admin.zipper.sliders.edit');
-            Route::delete('/{id}', [SlidersController::class, 'destroy'])->name('admin.zipper.sliders.delete');
-        });
+    Route::group(['prefix' => 'categories', 'namespace' => 'categories'], function () {
+        Route::get('/', [CategoriesController::class, 'index'])->name('admin.zipper.categories');
+        Route::post('/store', [CategoriesController::class, 'store'])->name('admin.zipper.categories.store');
+        Route::delete('/{id}', [CategoriesController::class, 'destroy'])->name('admin.zipper.categories.delete');
+        Route::get('/{id}', [CategoriesController::class, 'show'])->name('admin.zipper.categories.show');
     });
     Route::group(['prefix' => 'partners'], function () {
         Route::get('/', [PartnersController::class, 'index'])->name('admin.partners');
@@ -68,31 +45,43 @@ Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function () {
     Route::group(['prefix' => 'about'], function () {
         Route::get('/', [AboutController::class, 'index'])->name('admin.about');
         Route::post('/store', [AboutController::class, 'store'])->name('admin.about.store');
+        Route::post('/edit/{id}', [AboutController::class, 'edit'])->name('admin.about.edit');
+    });
+    Route::group(['prefix' => 'products', 'namespace' => 'products'], function () {
+        Route::get('/', [ProductsController::class, 'index'])->name('admin.zipper.products');
+        Route::post('/store', [ProductsController::class, 'store'])->name('admin.zipper.products.store');
+        Route::get('/search', [ProductsController::class, 'search'])->name('admin.zipper.products.search');
+        Route::post('/{id}/edit', [ProductsController::class, 'edit'])->name('admin.zipper.products.edit');
+        Route::delete('/{id}', [ProductsController::class, 'destroy'])->name('admin.zipper.products.delete');
+    });
+    Route::group(['prefix' => 'contactus'], function (){
+        Route::get('/', [\App\Http\Controllers\ContactUsController::class, 'index'])->name('admin.contactus');
     });
 });
 
 Route::get('/', function () {
-    $slidersItem = SliderItem::all();
-    $categories = Category::orderBy('created_at', 'desc')->paginate(4);
+    $phoneUtil = \libphonenumber\PhoneNumberUtil::getInstance();
+    $categories = Category::all();
     $pullers = Puller::orderBy('created_at', 'desc')->paginate(3);
     $sliders = Slider::orderBy('created_at', 'desc')->paginate(3);
     $partners = Partner::all();
     $abouts = About::all();
-    return view('front.home.index', ['lang' => \Illuminate\Support\Facades\App::getLocale()], compact('sliders', 'categories', 'pullers', 'slidersItem', 'partners', 'abouts'));
+    $phonenumber = 0;
+    if(!$abouts->isEmpty()){
+        $swissNumberProto = $phoneUtil->parse($abouts[0]->phone, "UZ");
+        $phonenumber = $phoneUtil->format($swissNumberProto, \libphonenumber\PhoneNumberFormat::INTERNATIONAL);
+    }
+    $slidersItem = SliderItem::all();
+    return view('front.home.index', ['lang' => \Illuminate\Support\Facades\App::getLocale()], compact('phonenumber', 'sliders', 'categories', 'pullers', 'slidersItem', 'partners', 'abouts'));
 })->name('homepage');
 Route::post('/contact', [ContactController::class, 'store'])->name('front.contact');
 Route::get('/product', [ProductController::class, 'index'])->name('productpage');
 Route::get('/product/{id}', [ProductController::class, 'show'])->name('product.show');
 
-
 Route::group(['prefix' => 'categories'], function () {
     Route::get('/', [CategoryController::class, 'index'])->name('front.category');
     Route::get('/{id}', [CategoryController::class, 'show'])->name('front.category.show');
 });
-Route::get('/zippers', [CategoryController::class, 'zipper'])->name('front.zippers.show');
-Route::get('/sliders', [CategoryController::class, 'slider'])->name('front.sliders.show');
-Route::get('/pullers', [CategoryController::class, 'puller'])->name('front.pullers.show');
-
 
 //Auth::routes();
 

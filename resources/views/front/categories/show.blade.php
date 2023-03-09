@@ -10,7 +10,6 @@
                 <li><a href="{{route('homepage')}}">{{ __('front.Home') }}</a></li>
                 <li>{{ $category['title_' . $lang] }}</li>
             </ol>
-
         </div>
     </div><!-- End Breadcrumbs -->
 
@@ -20,7 +19,9 @@
             <div class="section-header">
                 <h2>{{__('front.Our Products')}}</h2>
             </div>
-
+            <p class="container text-center pb-4 px-5">
+                {{ $category['description_' . $lang] }}
+            </p>
             <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry"
                  data-portfolio-sort="original-order">
 

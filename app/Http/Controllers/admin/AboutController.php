@@ -20,4 +20,10 @@ class AboutController extends Controller
         About::create($data);
         return redirect()->route('admin.about');
     }
+
+    public function edit(Request $request, $id) {
+        $about = About::find($id);
+        $about->update($request->all());
+        return redirect()->route('admin.about');
+    }
 }

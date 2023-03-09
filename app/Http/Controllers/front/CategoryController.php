@@ -17,14 +17,14 @@ class CategoryController extends Controller
     {
         $abouts = About::all();
         $categories = Category::all();
-        return view('front.categoriespage.index', ['lang' => App::getLocale()], compact('categories', 'abouts'));
+        return view('front.pages.categories.index', ['lang' => App::getLocale()], compact('categories', 'abouts'));
     }
 
     public function show($id)
     {
         $abouts = About::all();
         $category = Category::find($id);
-        return view('front.categories.show', ['lang' => App::getLocale()], compact('category', 'abouts'));
+        return view('front.pages.categories.show', ['lang' => App::getLocale()], compact('category', 'abouts'));
     }
 
     public function zipper()

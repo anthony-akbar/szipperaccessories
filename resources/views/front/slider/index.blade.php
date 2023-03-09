@@ -8,7 +8,6 @@
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-6 text-center">
-{{--                                                                <span>UpConstruction</span>--}}
                                 <h2 data-aos="fade-down">{{$slider['title_' . $lang]}}</h2>
                                 <p data-aos="fade-up">{{$slider['description_' . $lang]}}</p>
                                 <a data-aos="fade-up" data-aos-delay="200" href="#get-started"
@@ -21,11 +20,10 @@
             <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
             </a>
-
             <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
                 <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
             </a>
         @endforeach
     </div>
-
-</section><!-- End Hero Section -->
+</section>
+<!-- End Hero Section -->

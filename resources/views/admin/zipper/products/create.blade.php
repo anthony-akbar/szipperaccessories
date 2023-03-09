@@ -62,11 +62,6 @@
                             <input id="size" type="text" name="size" class="form-control"
                                    placeholder="Product Size" required>
                         </div>
-                        <div class="mt-3">
-                            <label for="color" class="form-label">Color</label>
-                            <input id="color" type="number" name="color" class="form-control" placeholder="Color"
-                                   required>
-                        </div>
                         <label for="category_id" class="form-label mt-3">Category Id</label>
                         <select class="tom-select w-full" id="category_id" name="category_id" required>
                             @foreach($categories as $category)

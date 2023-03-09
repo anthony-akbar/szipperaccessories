@@ -37,12 +37,6 @@
                                placeholder="Product Size"
                                value="{{ old('size', $product->size) }}" required>
                     </div>
-                    <div class="mt-3">
-                        <label for="vertical-form-2" class="form-label">Colors</label>
-                        <input id="vertical-form-2" type="number" name="color" class="form-control"
-                               value="{{ old('color', $product->color) }}" placeholder="Colors"
-                               required>
-                    </div>
                     <label for="category_id" class="form-label mt-3">Category Id</label>
                     <select class="tom-select w-full" id="category_id" name="category_id">
                         @foreach($categories as $category)
